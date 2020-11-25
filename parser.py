@@ -38,21 +38,22 @@ def mutual_friends(list_friends):
         print(i, result.text)
 
 
+try:
+    print(sys.argv)
+    user_id1 = int(sys.argv[1])
+    user_id2 = int(sys.argv[2])
+except IndexError:
+    print('Ошибка.Слишком мало параметров')
 
-print(sys.argv)
-arguments = sys.argv[1:]
-user_id1 = int(arguments[0])
-user_id2 = int(arguments[1])
-#user_id1 = 121976167
-#user_id2 = 166900632
-user_id1 = get_friends(user_id1)
-#mutual_friends(user_id1)
-user_id2 = get_friends(user_id2)
-user_id1 = preprocess_friends(user_id1)
-user_id2 = preprocess_friends(user_id2)
-list_friends = mutual_id(user_id1, user_id2)
-mutual_friends(list_friends)
-
+try:
+    user_id1 = get_friends(user_id1)
+    user_id2 = get_friends(user_id2)
+    user_id1 = preprocess_friends(user_id1)
+    user_id2 = preprocess_friends(user_id2)
+    list_friends = mutual_id(user_id1, user_id2)
+    mutual_friends(list_friends)
+except NameError:
+    print('Добавьте еще один аргумент!')
 
 
 
