@@ -1,10 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# ### Общие друзья в ВКОНТАКТЕ у двух разных пользователей
-# 
-
-# In[ ]:
 
 
 import requests
