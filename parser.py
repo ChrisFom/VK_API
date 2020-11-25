@@ -1,16 +1,10 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# ### Общие друзья в ВКОНТАКТЕ у двух разных пользователей
-# 
-
-# In[14]:
-
+##Общие друзья в ВКОНТАКТЕ у двух разных пользователей
 
 import requests
 import sys
 api_url = 'https://api.vk.com/method/friends.get'
-token = 'c7e88ca5c7e88ca5c7e88ca555c79c027ecc7e8c7e88ca5987b8722588aeb7996f14dd2'
+token = 'ВВЕДИТЕ СВОЙ ТОКЕН'
 version = 5.92
 
 
@@ -44,8 +38,6 @@ def mutual_friends(list_friends):
         print(i, result.text)
 
 
-# In[16]:
-
 
 print(sys.argv)
 arguments = sys.argv[1:]
@@ -62,7 +54,7 @@ list_friends = mutual_id(user_id1, user_id2)
 mutual_friends(list_friends)
 
 
-# In[ ]:
+
 
 
 
